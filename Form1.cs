@@ -15,6 +15,19 @@ namespace AP_2
         public Form_Auth()
         {
             InitializeComponent();
+            txtBox_pswd.UseSystemPasswordChar = true;
+        }
+
+        private void chckBox_ShowPswd_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chckBox_ShowPswd.Checked)
+            {
+                txtBox_pswd.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtBox_pswd.UseSystemPasswordChar = true;
+            }
         }
     }
 }
