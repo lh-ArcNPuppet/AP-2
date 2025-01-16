@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AP-2", "AP-2.csproj", "{A85F0969-59BF-4C43-95C2-DB892AB66502}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth", "Auth.csproj", "{A85F0969-59BF-4C43-95C2-DB892AB66502}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListeArticles", "ListeArticles\ListeArticles.csproj", "{983EF437-F3FB-40C7-8D19-2B7834B1C255}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIB_DAL", "ClassLibrary1\LIB_DAL.csproj", "{DFEDEAD7-19DF-43BB-9926-1AB02D45A4AA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LIB_BLL", "LIB_BLL\LIB_BLL.csproj", "{BF8E09C7-0FD5-43F6-B05B-B2E810005B50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{983EF437-F3FB-40C7-8D19-2B7834B1C255}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{983EF437-F3FB-40C7-8D19-2B7834B1C255}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{983EF437-F3FB-40C7-8D19-2B7834B1C255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFEDEAD7-19DF-43BB-9926-1AB02D45A4AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFEDEAD7-19DF-43BB-9926-1AB02D45A4AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFEDEAD7-19DF-43BB-9926-1AB02D45A4AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFEDEAD7-19DF-43BB-9926-1AB02D45A4AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8E09C7-0FD5-43F6-B05B-B2E810005B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8E09C7-0FD5-43F6-B05B-B2E810005B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8E09C7-0FD5-43F6-B05B-B2E810005B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8E09C7-0FD5-43F6-B05B-B2E810005B50}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
