@@ -63,6 +63,16 @@ namespace AP_2.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap log_in {
+            get {
+                object obj = ResourceManager.GetObject("log-in", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_picture {
             get {
                 object obj = ResourceManager.GetObject("login_picture", resourceCulture);

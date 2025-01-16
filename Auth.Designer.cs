@@ -33,12 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBox_idInput = new System.Windows.Forms.TextBox();
             this.txtBox_pswd = new System.Windows.Forms.TextBox();
-            this.btn_connect = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.chckBox_ShowPswd = new System.Windows.Forms.CheckBox();
+            this.btn_connect = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,16 +80,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Mot de passe";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::AP_2.Properties.Resources.login_picture;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(343, 127);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // txtBox_idInput
             // 
             this.txtBox_idInput.Location = new System.Drawing.Point(106, 206);
@@ -103,15 +93,6 @@
             this.txtBox_pswd.Name = "txtBox_pswd";
             this.txtBox_pswd.Size = new System.Drawing.Size(211, 20);
             this.txtBox_pswd.TabIndex = 6;
-            // 
-            // btn_connect
-            // 
-            this.btn_connect.Location = new System.Drawing.Point(265, 288);
-            this.btn_connect.Name = "btn_connect";
-            this.btn_connect.Size = new System.Drawing.Size(90, 23);
-            this.btn_connect.TabIndex = 7;
-            this.btn_connect.Text = "Se connecter";
-            this.btn_connect.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -133,6 +114,28 @@
             this.chckBox_ShowPswd.Text = "Afficher le mot de passe";
             this.chckBox_ShowPswd.UseVisualStyleBackColor = true;
             this.chckBox_ShowPswd.CheckedChanged += new System.EventHandler(this.chckBox_ShowPswd_CheckedChanged);
+            // 
+            // btn_connect
+            // 
+            this.btn_connect.Image = global::AP_2.Properties.Resources.log_in;
+            this.btn_connect.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_connect.Location = new System.Drawing.Point(261, 288);
+            this.btn_connect.Name = "btn_connect";
+            this.btn_connect.Size = new System.Drawing.Size(94, 23);
+            this.btn_connect.TabIndex = 7;
+            this.btn_connect.Text = "Se connecter";
+            this.btn_connect.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_connect.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::AP_2.Properties.Resources.login_picture;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(343, 127);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // Form_Auth
             // 
