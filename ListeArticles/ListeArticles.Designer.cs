@@ -32,12 +32,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.btn_NewArticle = new System.Windows.Forms.Button();
+            this.chckBox_orderDesc = new System.Windows.Forms.CheckBox();
+            this.cmbBox_searchCat = new System.Windows.Forms.ComboBox();
+            this.cmbBox_searchLib = new System.Windows.Forms.ComboBox();
+            this.cmbBox_searchDep = new System.Windows.Forms.ComboBox();
+            this.cmbBox_searchFab = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -78,59 +78,59 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Recherche par libellé :";
             // 
-            // button1
+            // btn_NewArticle
             // 
-            this.button1.Image = global::ListeArticles.Properties.Resources.circle_plus;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(468, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Nouvel article";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_NewArticle.Image = global::ListeArticles.Properties.Resources.circle_plus;
+            this.btn_NewArticle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_NewArticle.Location = new System.Drawing.Point(468, 82);
+            this.btn_NewArticle.Name = "btn_NewArticle";
+            this.btn_NewArticle.Size = new System.Drawing.Size(96, 23);
+            this.btn_NewArticle.TabIndex = 4;
+            this.btn_NewArticle.Text = "Nouvel article";
+            this.btn_NewArticle.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_NewArticle.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chckBox_orderDesc
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(468, 30);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(137, 17);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "Classement décroissant";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chckBox_orderDesc.AutoSize = true;
+            this.chckBox_orderDesc.Location = new System.Drawing.Point(468, 30);
+            this.chckBox_orderDesc.Name = "chckBox_orderDesc";
+            this.chckBox_orderDesc.Size = new System.Drawing.Size(137, 17);
+            this.chckBox_orderDesc.TabIndex = 5;
+            this.chckBox_orderDesc.Text = "Classement décroissant";
+            this.chckBox_orderDesc.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmbBox_searchCat
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(149, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(167, 21);
-            this.comboBox1.TabIndex = 6;
+            this.cmbBox_searchCat.FormattingEnabled = true;
+            this.cmbBox_searchCat.Location = new System.Drawing.Point(149, 6);
+            this.cmbBox_searchCat.Name = "cmbBox_searchCat";
+            this.cmbBox_searchCat.Size = new System.Drawing.Size(167, 21);
+            this.cmbBox_searchCat.TabIndex = 6;
             // 
-            // comboBox2
+            // cmbBox_searchLib
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(149, 84);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(248, 21);
-            this.comboBox2.TabIndex = 7;
+            this.cmbBox_searchLib.FormattingEnabled = true;
+            this.cmbBox_searchLib.Location = new System.Drawing.Point(149, 84);
+            this.cmbBox_searchLib.Name = "cmbBox_searchLib";
+            this.cmbBox_searchLib.Size = new System.Drawing.Size(248, 21);
+            this.cmbBox_searchLib.TabIndex = 7;
             // 
-            // comboBox3
+            // cmbBox_searchDep
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(149, 57);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(248, 21);
-            this.comboBox3.TabIndex = 8;
+            this.cmbBox_searchDep.FormattingEnabled = true;
+            this.cmbBox_searchDep.Location = new System.Drawing.Point(149, 57);
+            this.cmbBox_searchDep.Name = "cmbBox_searchDep";
+            this.cmbBox_searchDep.Size = new System.Drawing.Size(248, 21);
+            this.cmbBox_searchDep.TabIndex = 8;
             // 
-            // comboBox4
+            // cmbBox_searchFab
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(149, 31);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(248, 21);
-            this.comboBox4.TabIndex = 9;
+            this.cmbBox_searchFab.FormattingEnabled = true;
+            this.cmbBox_searchFab.Location = new System.Drawing.Point(149, 31);
+            this.cmbBox_searchFab.Name = "cmbBox_searchFab";
+            this.cmbBox_searchFab.Size = new System.Drawing.Size(248, 21);
+            this.cmbBox_searchFab.TabIndex = 9;
             // 
             // dataGridView1
             // 
@@ -146,12 +146,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 427);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cmbBox_searchFab);
+            this.Controls.Add(this.cmbBox_searchDep);
+            this.Controls.Add(this.cmbBox_searchLib);
+            this.Controls.Add(this.cmbBox_searchCat);
+            this.Controls.Add(this.chckBox_orderDesc);
+            this.Controls.Add(this.btn_NewArticle);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -173,12 +173,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Button btn_NewArticle;
+        private System.Windows.Forms.CheckBox chckBox_orderDesc;
+        private System.Windows.Forms.ComboBox cmbBox_searchCat;
+        private System.Windows.Forms.ComboBox cmbBox_searchLib;
+        private System.Windows.Forms.ComboBox cmbBox_searchDep;
+        private System.Windows.Forms.ComboBox cmbBox_searchFab;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
