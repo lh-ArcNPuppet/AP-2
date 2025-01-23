@@ -86,5 +86,11 @@
   <ItemGroup>
     <None Include="Resources\log-in.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ClassLibrary1\LIB_DAL.csproj">
+      <Project>{dfedead7-19df-43bb-9926-1ab02d45a4aa}</Project>
+      <Name>LIB_DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

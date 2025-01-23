@@ -83,5 +83,11 @@
   <ItemGroup>
     <None Include="Resources\circle-plus.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Article\Article.csproj">
+      <Project>{74d80904-7410-4460-acec-a1cd3355322d}</Project>
+      <Name>Article</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

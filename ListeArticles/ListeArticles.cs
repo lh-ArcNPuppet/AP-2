@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Article;
 
 namespace ListeArticles
 {
@@ -15,6 +16,17 @@ namespace ListeArticles
         public Form_LstArticles()
         {
             InitializeComponent();
+        }
+
+        private void Form_LstArticles_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_NewArticle_Click(object sender, EventArgs e)
+        {
+            Form_Article form_Article = new Form_Article();
+            form_Article.ShowDialog();
         }
     }
 }

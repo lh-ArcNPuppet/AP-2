@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpBox_searchArticle = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Article));
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,29 +50,16 @@
             this.numUD_unite = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
             this.dtp_dateValid = new System.Windows.Forms.DateTimePicker();
-            this.grpBox_searchArticle.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_article)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUD_unite)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grpBox_searchArticle
-            // 
-            this.grpBox_searchArticle.BackColor = System.Drawing.Color.Gold;
-            this.grpBox_searchArticle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.grpBox_searchArticle.Controls.Add(this.comboBox2);
-            this.grpBox_searchArticle.Controls.Add(this.comboBox1);
-            this.grpBox_searchArticle.Controls.Add(this.label2);
-            this.grpBox_searchArticle.Controls.Add(this.label1);
-            this.grpBox_searchArticle.Location = new System.Drawing.Point(0, 0);
-            this.grpBox_searchArticle.Name = "grpBox_searchArticle";
-            this.grpBox_searchArticle.Size = new System.Drawing.Size(708, 92);
-            this.grpBox_searchArticle.TabIndex = 0;
-            this.grpBox_searchArticle.TabStop = false;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(150, 48);
+            this.comboBox2.Location = new System.Drawing.Point(151, 51);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(230, 21);
             this.comboBox2.TabIndex = 2;
@@ -80,7 +67,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(150, 22);
+            this.comboBox1.Location = new System.Drawing.Point(151, 25);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(172, 21);
             this.comboBox1.TabIndex = 1;
@@ -88,7 +75,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 51);
+            this.label2.Location = new System.Drawing.Point(13, 54);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 13);
             this.label2.TabIndex = 1;
@@ -97,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 25);
+            this.label1.Location = new System.Drawing.Point(13, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 13);
             this.label1.TabIndex = 0;
@@ -197,10 +184,11 @@
             this.btn_delete.Text = "Supprimer";
             this.btn_delete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
             // 
             // btn_save
             // 
-            this.btn_save.Image = global::Article.Properties.Resources.save;
+            this.btn_save.Image = ((System.Drawing.Image)(resources.GetObject("btn_save.Image")));
             this.btn_save.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_save.Location = new System.Drawing.Point(152, 312);
             this.btn_save.Name = "btn_save";
@@ -209,10 +197,11 @@
             this.btn_save.Text = "Enregistrer";
             this.btn_save.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_cancel
             // 
-            this.btn_cancel.Image = global::Article.Properties.Resources.x;
+            this.btn_cancel.Image = ((System.Drawing.Image)(resources.GetObject("btn_cancel.Image")));
             this.btn_cancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cancel.Location = new System.Drawing.Point(59, 312);
             this.btn_cancel.Name = "btn_cancel";
@@ -221,6 +210,7 @@
             this.btn_cancel.Text = "Annuler";
             this.btn_cancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_cancel.UseVisualStyleBackColor = true;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // button1
             // 
@@ -255,11 +245,24 @@
             this.dtp_dateValid.Size = new System.Drawing.Size(95, 20);
             this.dtp_dateValid.TabIndex = 18;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.comboBox2);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Location = new System.Drawing.Point(-1, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(709, 100);
+            this.panel1.TabIndex = 19;
+            // 
             // Form_Article
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 347);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dtp_dateValid);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.numUD_unite);
@@ -277,21 +280,21 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.grpBox_searchArticle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Article";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Article";
-            this.grpBox_searchArticle.ResumeLayout(false);
-            this.grpBox_searchArticle.PerformLayout();
+            this.Load += new System.EventHandler(this.Form_Article_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_article)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numUD_unite)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox grpBox_searchArticle;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label2;
@@ -313,6 +316,7 @@
         private System.Windows.Forms.NumericUpDown numUD_unite;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtp_dateValid;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 

@@ -44,5 +44,11 @@
     <Compile Include="DB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LIB_BLL\LIB_BLL.csproj">
+      <Project>{bf8e09c7-0fd5-43f6-b05b-b2e810005b50}</Project>
+      <Name>LIB_BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
