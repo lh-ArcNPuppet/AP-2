@@ -46,13 +46,10 @@
             this.btn_delete = new System.Windows.Forms.Button();
             this.btn_save = new System.Windows.Forms.Button();
             this.btn_cancel = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.numUD_unite = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtp_dateValid = new System.Windows.Forms.DateTimePicker();
+            this.btn_points = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbo_ubite = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_article)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numUD_unite)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -170,7 +167,7 @@
             this.dgv_article.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_article.Location = new System.Drawing.Point(394, 107);
             this.dgv_article.Name = "dgv_article";
-            this.dgv_article.Size = new System.Drawing.Size(302, 228);
+            this.dgv_article.Size = new System.Drawing.Size(685, 228);
             this.dgv_article.TabIndex = 11;
             // 
             // btn_delete
@@ -212,38 +209,14 @@
             this.btn_cancel.UseVisualStyleBackColor = true;
             this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
-            // button1
+            // btn_points
             // 
-            this.button1.Image = global::Article.Properties.Resources.ellipsis;
-            this.button1.Location = new System.Drawing.Point(256, 105);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 23);
-            this.button1.TabIndex = 12;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // numUD_unite
-            // 
-            this.numUD_unite.Location = new System.Drawing.Point(103, 232);
-            this.numUD_unite.Name = "numUD_unite";
-            this.numUD_unite.Size = new System.Drawing.Size(77, 20);
-            this.numUD_unite.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 266);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 13);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Date validité :";
-            // 
-            // dtp_dateValid
-            // 
-            this.dtp_dateValid.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_dateValid.Location = new System.Drawing.Point(103, 262);
-            this.dtp_dateValid.Name = "dtp_dateValid";
-            this.dtp_dateValid.Size = new System.Drawing.Size(95, 20);
-            this.dtp_dateValid.TabIndex = 18;
+            this.btn_points.Image = global::Article.Properties.Resources.ellipsis;
+            this.btn_points.Location = new System.Drawing.Point(256, 105);
+            this.btn_points.Name = "btn_points";
+            this.btn_points.Size = new System.Drawing.Size(28, 23);
+            this.btn_points.TabIndex = 12;
+            this.btn_points.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
@@ -254,22 +227,28 @@
             this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(709, 100);
+            this.panel1.Size = new System.Drawing.Size(1092, 100);
             this.panel1.TabIndex = 19;
+            // 
+            // cbo_ubite
+            // 
+            this.cbo_ubite.FormattingEnabled = true;
+            this.cbo_ubite.Location = new System.Drawing.Point(103, 231);
+            this.cbo_ubite.Name = "cbo_ubite";
+            this.cbo_ubite.Size = new System.Drawing.Size(95, 21);
+            this.cbo_ubite.TabIndex = 20;
             // 
             // Form_Article
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 347);
+            this.ClientSize = new System.Drawing.Size(1091, 347);
+            this.Controls.Add(this.cbo_ubite);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dtp_dateValid);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.numUD_unite);
             this.Controls.Add(this.btn_delete);
             this.Controls.Add(this.btn_save);
             this.Controls.Add(this.btn_cancel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_points);
             this.Controls.Add(this.dgv_article);
             this.Controls.Add(this.txtBox_libelle);
             this.Controls.Add(this.txtBox_ref);
@@ -286,7 +265,6 @@
             this.Text = "Article";
             this.Load += new System.EventHandler(this.Form_Article_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_article)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numUD_unite)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -309,14 +287,12 @@
         private System.Windows.Forms.TextBox txtBox_ref;
         private System.Windows.Forms.TextBox txtBox_libelle;
         private System.Windows.Forms.DataGridView dgv_article;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_points;
         private System.Windows.Forms.Button btn_cancel;
         private System.Windows.Forms.Button btn_save;
         private System.Windows.Forms.Button btn_delete;
-        private System.Windows.Forms.NumericUpDown numUD_unite;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dtp_dateValid;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cbo_ubite;
     }
 }
 

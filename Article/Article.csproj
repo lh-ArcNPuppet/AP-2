@@ -92,5 +92,15 @@
   <ItemGroup>
     <None Include="Resources\trash-2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary1\LIB_DAL.csproj">
+      <Project>{dfedead7-19df-43bb-9926-1ab02d45a4aa}</Project>
+      <Name>LIB_DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LIB_BLL\LIB_BLL.csproj">
+      <Project>{bf8e09c7-0fd5-43f6-b05b-b2e810005b50}</Project>
+      <Name>LIB_BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

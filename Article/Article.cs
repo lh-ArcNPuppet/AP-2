@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LIB_BLL;
+using LIB_DAL;
 
 namespace Article
 {
@@ -37,8 +40,24 @@ namespace Article
 
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            try { }
-            catch { }
+            string valueId = txtBox_ref.Text;
+            int res = DB.supprimer(valueId);
+            if (res == 1)
+            {
+                MessageBox.Show(
+                        "Valeur supprimé avec succès.",
+                        "Suppession de valeur",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show(
+                        "Problème rencontré lors de l'exécution de la requête SQL.",
+                        "Erreur",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+            }
         }
     }
 }
