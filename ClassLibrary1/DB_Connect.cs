@@ -10,21 +10,23 @@ namespace LIB_DAL
 {
     public class DB_Connect
     {
-        private static SqlConnection cnt;
+        private static bool connecte = false;
+        public static SqlConnection cnt;
         public DB_Connect() { }
-        public static bool openConnection(string DS_value, string IC_value)
+        public static bool openConnection()
         {
             cnt = new SqlConnection();
 
             //Informations de connexion au serveur SQL Server
-            string dataSource = "Data Source=" + DS_value;
-            string initialCatalog = "Initial Catalog=" + IC_value;
+            string dataSource = "Data Source=" + "SRV-SQL\\SQL_SLAM";
+            string initialCatalog = "Initial Catalog=" + "BD_STOCK2";
             string integratedSecurity = "Integrated Security=" + "SSPI";
 
             cnt.ConnectionString = dataSource + ";" + initialCatalog + ";" + integratedSecurity;
             try
             {
                 cnt.Open();
+                connecte = true;
                 return true;
             }
             catch (Exception)
@@ -36,33 +38,31 @@ namespace LIB_DAL
         {
             return "Connecté sur le serveur " + cnt.DataSource + " ➔ " + cnt.Database + "\nEtat = " + cnt.State;
         }
-        public void fermerConnexion()
+        public static void fermerConnexion()
         {
             cnt.Close();
+            connecte = false;
         }
 
-        public static List<BD_Article> getAllMagasins()
+        public static SqlDataReader query(string sql)
         {
-            List<BD_Article> res = new List<BD_Article>();
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-            cmd.Connection = cnt;
-            cmd.CommandText = "select * from Article";
-            try
+            if (connecte)
             {
-                dr = cmd.ExecuteReader();
-                while (dr.Read())
+                SqlCommand cmd = new SqlCommand();
+                SqlDataReader dr;
+                cmd.Connection = cnt;
+                cmd.CommandText = sql;
+                try
                 {
-                    BD_Article a = new BD_Article(dr.GetString(0), dr.GetString(1), dr.GetString(2), dr.GetString(3), dr.GetString(4));
-                    res.Add(a);
+                    dr = cmd.ExecuteReader();
+                    return dr;
                 }
-                dr.Close();
-                return res;
+                catch (Exception erreur)
+                {
+                    return null;
+                }
             }
-            catch
-            {
-                return null;
-            }
+            return null;
         }
     }
 }

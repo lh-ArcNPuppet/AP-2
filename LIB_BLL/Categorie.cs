@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace LIB_BLL
 {
-    public class BD_Categorie {
+    public class Categorie {
         //Attributs privé
         private string code;
         private string libelle;
 
         //Constructeur
-        public BD_Categorie (string code, string libelle)
+        public Categorie (string code, string libelle)
         {
             this.code = code;
             this.libelle = libelle;

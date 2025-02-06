@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LIB_BLL
 {
-    public class BD_Article
+    public class Article
     {
         //Attributs privé
         private string reference;
@@ -16,7 +16,7 @@ namespace LIB_BLL
         private string unite;
 
         //Constructeur
-        public BD_Article(string r, string lib, string cat, string fab, string unit)
+        public Article(string r, string lib, string cat, string fab, string unit)
         { 
             this.reference = r;
             this.libelle = lib;

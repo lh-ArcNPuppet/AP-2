@@ -22,20 +22,28 @@ namespace AP_2
 
         private void btn_connect_Click(object sender, EventArgs e)
         {
-            string BDD_Name = txtBox_bddName.Text;
-            string BDD_Catalogue = txtBox_bddCat.Text;
+            string idInput = txtBox_id.Text;
+            string pswdInput = txtBox_pass.Text;
 
-            if((BDD_Name != "") && (BDD_Catalogue != ""))
+            if((idInput != "") && (pswdInput != ""))
             {
-                if (DB_Connect.openConnection(BDD_Name, BDD_Catalogue))
+                if (DB_Connect.openConnection())
                 {
-                    MessageBox.Show(DB_Connect.afficherConnection(), "Connection réussi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (Authentification.checkUser(idInput, pswdInput))
+                    {
+
+                    }
+                    
+                    
+                    
+                    
+                    
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("Echec de la connection au serveur", "Erreur connection", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Impossible de se connecter à la base de données", "Erreur connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //txtBox_bddName.Clear();
                     //txtBox_bddCat.Clear();
                     failConnection++;
@@ -43,17 +51,27 @@ namespace AP_2
             }
             else
             {
-                MessageBox.Show("Veuillez remplir le formulaire en entier", "Formulaire incomplet", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Identifiant ou mot de passe non renseigné", "Formulaire incomplet", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             if(failConnection == 5)
             {
-                MessageBox.Show("Vous avez échouée à vous connecteur au serveur 5 fois.\nL'application va automatiquement se refermer par mesure de sécurité.", "Trop de tentatives échouées", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Vous avez échouée 5 fois à vous connecter au serveur BDD.\nL'application va automatiquement se refermer par mesure de sécurité.", "Trop de tentatives erronées", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.DialogResult = DialogResult.Cancel;
                 this.Close();
             }
         }
 
-        
+        private void chk_ShowPswd_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk_ShowPswd.Checked)
+            {
+                txtBox_pass.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                txtBox_pass.UseSystemPasswordChar = true;
+            }
+        }
     }
 }

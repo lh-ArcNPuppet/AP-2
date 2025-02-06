@@ -33,11 +33,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtBox_bddName = new System.Windows.Forms.TextBox();
+            this.txtBox_id = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_connect = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtBox_bddCat = new System.Windows.Forms.TextBox();
+            this.txtBox_pass = new System.Windows.Forms.TextBox();
+            this.chk_ShowPswd = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,25 +67,25 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(32, 182);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Nom BDD";
+            this.label3.Text = "Identifiant :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(32, 208);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 13);
+            this.label4.Size = new System.Drawing.Size(77, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Nom catalogue";
+            this.label4.Text = "Mot de passe :";
             // 
-            // txtBox_bddName
+            // txtBox_id
             // 
-            this.txtBox_bddName.Location = new System.Drawing.Point(117, 179);
-            this.txtBox_bddName.Name = "txtBox_bddName";
-            this.txtBox_bddName.Size = new System.Drawing.Size(211, 20);
-            this.txtBox_bddName.TabIndex = 5;
+            this.txtBox_id.Location = new System.Drawing.Point(117, 179);
+            this.txtBox_id.Name = "txtBox_id";
+            this.txtBox_id.Size = new System.Drawing.Size(211, 20);
+            this.txtBox_id.TabIndex = 5;
             // 
             // label5
             // 
@@ -100,7 +101,7 @@
             // 
             this.btn_connect.Image = global::AP_2.Properties.Resources.log_in;
             this.btn_connect.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_connect.Location = new System.Drawing.Point(261, 249);
+            this.btn_connect.Location = new System.Drawing.Point(261, 263);
             this.btn_connect.Name = "btn_connect";
             this.btn_connect.Size = new System.Drawing.Size(94, 23);
             this.btn_connect.TabIndex = 7;
@@ -119,22 +120,35 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // txtBox_bddCat
+            // txtBox_pass
             // 
-            this.txtBox_bddCat.Location = new System.Drawing.Point(117, 205);
-            this.txtBox_bddCat.Name = "txtBox_bddCat";
-            this.txtBox_bddCat.Size = new System.Drawing.Size(211, 20);
-            this.txtBox_bddCat.TabIndex = 10;
+            this.txtBox_pass.Location = new System.Drawing.Point(117, 205);
+            this.txtBox_pass.Name = "txtBox_pass";
+            this.txtBox_pass.Size = new System.Drawing.Size(211, 20);
+            this.txtBox_pass.TabIndex = 10;
+            this.txtBox_pass.UseSystemPasswordChar = true;
+            // 
+            // chk_ShowPswd
+            // 
+            this.chk_ShowPswd.AutoSize = true;
+            this.chk_ShowPswd.Location = new System.Drawing.Point(117, 232);
+            this.chk_ShowPswd.Name = "chk_ShowPswd";
+            this.chk_ShowPswd.Size = new System.Drawing.Size(128, 17);
+            this.chk_ShowPswd.TabIndex = 11;
+            this.chk_ShowPswd.Text = "Afficher mot de passe";
+            this.chk_ShowPswd.UseVisualStyleBackColor = true;
+            this.chk_ShowPswd.CheckedChanged += new System.EventHandler(this.chk_ShowPswd_CheckedChanged);
             // 
             // Form_Auth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 282);
-            this.Controls.Add(this.txtBox_bddCat);
+            this.ClientSize = new System.Drawing.Size(367, 298);
+            this.Controls.Add(this.chk_ShowPswd);
+            this.Controls.Add(this.txtBox_pass);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_connect);
-            this.Controls.Add(this.txtBox_bddName);
+            this.Controls.Add(this.txtBox_id);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -159,10 +173,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox txtBox_bddName;
+        private System.Windows.Forms.TextBox txtBox_id;
         private System.Windows.Forms.Button btn_connect;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtBox_bddCat;
+        private System.Windows.Forms.TextBox txtBox_pass;
+        private System.Windows.Forms.CheckBox chk_ShowPswd;
     }
 }
 

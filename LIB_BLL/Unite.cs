@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace LIB_BLL
 {
-    public class BD_Unite
+    public class Unite
     {
         //Attributs privé
         private string code;
         private string libelle;
 
         //Constructeur
-        public BD_Unite (string code, string libelle)
+        public Unite (string code, string libelle)
         {
             this.code = code;
             this.libelle = libelle;
