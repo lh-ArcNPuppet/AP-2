@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace LIB_DAL
 {
-    public class DB
+    public class DB_Connect
     {
         private static SqlConnection cnt;
-        public DB() { }
+        public DB_Connect() { }
         public static bool openConnection(string DS_value, string IC_value)
         {
             cnt = new SqlConnection();
@@ -62,48 +62,6 @@ namespace LIB_DAL
             catch
             {
                 return null;
-            }
-        }
-
-        public static int ajouterArticle(BD_Article a)
-        {
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-            cmd.Connection = cnt;
-            cmd.CommandText = "insert into Article (reference, libelle, categorie, fabricant, unite) values (" + a.getReference() + ", '" + a.getLibelle() + ", '" + a.getCategorie() + ", '" + a.getFabricant() + ", '" + a.getUnite() + "');";
-            try
-            {
-                dr = cmd.ExecuteReader();
-                dr.Read();
-
-
-                dr.Close();
-                return 1;
-            }
-            catch
-            {
-                return 0;
-            }
-        }
-
-        public static int supprimer(string r)
-        {
-            SqlCommand cmd = new SqlCommand();
-            SqlDataReader dr;
-            cmd.Connection = cnt;
-            cmd.CommandText = "delete from Article where reference = " + r;
-            try
-            {
-                dr = cmd.ExecuteReader();
-                dr.Read();
-
-
-                dr.Close();
-                return 1;
-            }
-            catch
-            {
-                return 0;
             }
         }
     }

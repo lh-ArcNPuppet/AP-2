@@ -27,9 +27,9 @@ namespace AP_2
 
             if((BDD_Name != "") && (BDD_Catalogue != ""))
             {
-                if (DB.openConnection(BDD_Name, BDD_Catalogue))
+                if (DB_Connect.openConnection(BDD_Name, BDD_Catalogue))
                 {
-                    MessageBox.Show(DB.afficherConnection(), "Connection réussi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(DB_Connect.afficherConnection(), "Connection réussi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.DialogResult = DialogResult.OK;
                     this.Close();
                 }

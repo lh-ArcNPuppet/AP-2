@@ -41,7 +41,7 @@ namespace Article
         private void btn_delete_Click(object sender, EventArgs e)
         {
             string valueId = txtBox_ref.Text;
-            int res = DB.supprimer(valueId);
+            int res = DB_Connect.supprimer(valueId);
             if (res == 1)
             {
                 MessageBox.Show(
