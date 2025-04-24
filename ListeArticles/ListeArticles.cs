@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Article;
+using LIB_DAL;
+using LIB_BLL;
 
 namespace ListeArticles
 {
@@ -20,13 +22,20 @@ namespace ListeArticles
 
         private void Form_LstArticles_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_NewArticle_Click(object sender, EventArgs e)
         {
             Form_Article form_Article = new Form_Article();
             form_Article.ShowDialog();
+        }
+        public void refreshDGV()
+        {
+            try
+            {
+                
+            }
         }
     }
 }

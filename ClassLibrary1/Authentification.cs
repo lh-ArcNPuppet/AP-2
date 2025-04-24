@@ -20,13 +20,15 @@ namespace LIB_DAL
             for (int i = 0; i < bytes.Length; i++)
             {
                 sb.Append(bytes[i].ToString("X2"));
+                
             }
             return sb.ToString();
         }
-
         public static UserList checkUser(string username, string password)
         {
-            string sql = "select * from Magasin where username = " ;
+            SqlCommand cmd = new SqlCommand();
+            SqlDataReader dr;
+            string sql = "select * from Users where identifiant = " ;
             try
             {
                 dr = cmd.ExecuteReader();

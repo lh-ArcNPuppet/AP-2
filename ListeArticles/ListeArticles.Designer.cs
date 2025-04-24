@@ -34,14 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btn_NewArticle = new System.Windows.Forms.Button();
-            this.chckBox_orderDesc = new System.Windows.Forms.CheckBox();
             this.cmbBox_searchCat = new System.Windows.Forms.ComboBox();
             this.cmbBox_searchLib = new System.Windows.Forms.ComboBox();
             this.cmbBox_searchDep = new System.Windows.Forms.ComboBox();
             this.cmbBox_searchFab = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_listArticle = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listArticle)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -99,23 +98,12 @@
             this.btn_NewArticle.UseVisualStyleBackColor = false;
             this.btn_NewArticle.Click += new System.EventHandler(this.btn_NewArticle_Click);
             // 
-            // chckBox_orderDesc
-            // 
-            this.chckBox_orderDesc.AutoSize = true;
-            this.chckBox_orderDesc.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.chckBox_orderDesc.Location = new System.Drawing.Point(449, 10);
-            this.chckBox_orderDesc.Name = "chckBox_orderDesc";
-            this.chckBox_orderDesc.Size = new System.Drawing.Size(137, 17);
-            this.chckBox_orderDesc.TabIndex = 5;
-            this.chckBox_orderDesc.Text = "Classement décroissant";
-            this.chckBox_orderDesc.UseVisualStyleBackColor = false;
-            // 
             // cmbBox_searchCat
             // 
             this.cmbBox_searchCat.FormattingEnabled = true;
             this.cmbBox_searchCat.Location = new System.Drawing.Point(174, 6);
             this.cmbBox_searchCat.Name = "cmbBox_searchCat";
-            this.cmbBox_searchCat.Size = new System.Drawing.Size(167, 21);
+            this.cmbBox_searchCat.Size = new System.Drawing.Size(178, 21);
             this.cmbBox_searchCat.TabIndex = 6;
             // 
             // cmbBox_searchLib
@@ -142,13 +130,13 @@
             this.cmbBox_searchFab.Size = new System.Drawing.Size(248, 21);
             this.cmbBox_searchFab.TabIndex = 9;
             // 
-            // dataGridView1
+            // dgv_listArticle
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 122);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(743, 297);
-            this.dataGridView1.TabIndex = 10;
+            this.dgv_listArticle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_listArticle.Location = new System.Drawing.Point(12, 122);
+            this.dgv_listArticle.Name = "dgv_listArticle";
+            this.dgv_listArticle.Size = new System.Drawing.Size(743, 297);
+            this.dgv_listArticle.TabIndex = 10;
             // 
             // panel1
             // 
@@ -163,12 +151,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 432);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgv_listArticle);
             this.Controls.Add(this.cmbBox_searchFab);
             this.Controls.Add(this.cmbBox_searchDep);
             this.Controls.Add(this.cmbBox_searchLib);
             this.Controls.Add(this.cmbBox_searchCat);
-            this.Controls.Add(this.chckBox_orderDesc);
             this.Controls.Add(this.btn_NewArticle);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -182,7 +169,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Liste des articles";
             this.Load += new System.EventHandler(this.Form_LstArticles_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_listArticle)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,12 +182,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btn_NewArticle;
-        private System.Windows.Forms.CheckBox chckBox_orderDesc;
         private System.Windows.Forms.ComboBox cmbBox_searchCat;
         private System.Windows.Forms.ComboBox cmbBox_searchLib;
         private System.Windows.Forms.ComboBox cmbBox_searchDep;
         private System.Windows.Forms.ComboBox cmbBox_searchFab;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_listArticle;
         private System.Windows.Forms.Panel panel1;
     }
 }

@@ -39,6 +39,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBox_pass = new System.Windows.Forms.TextBox();
             this.chk_ShowPswd = new System.Windows.Forms.CheckBox();
+            this.lbl_ForgotPassword = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,7 +132,7 @@
             // chk_ShowPswd
             // 
             this.chk_ShowPswd.AutoSize = true;
-            this.chk_ShowPswd.Location = new System.Drawing.Point(117, 232);
+            this.chk_ShowPswd.Location = new System.Drawing.Point(117, 228);
             this.chk_ShowPswd.Name = "chk_ShowPswd";
             this.chk_ShowPswd.Size = new System.Drawing.Size(128, 17);
             this.chk_ShowPswd.TabIndex = 11;
@@ -139,11 +140,21 @@
             this.chk_ShowPswd.UseVisualStyleBackColor = true;
             this.chk_ShowPswd.CheckedChanged += new System.EventHandler(this.chk_ShowPswd_CheckedChanged);
             // 
+            // lbl_ForgotPassword
+            // 
+            this.lbl_ForgotPassword.AutoSize = true;
+            this.lbl_ForgotPassword.Location = new System.Drawing.Point(114, 248);
+            this.lbl_ForgotPassword.Name = "lbl_ForgotPassword";
+            this.lbl_ForgotPassword.Size = new System.Drawing.Size(102, 13);
+            this.lbl_ForgotPassword.TabIndex = 12;
+            this.lbl_ForgotPassword.Text = "Mot de passe oublié";
+            // 
             // Form_Auth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(367, 298);
+            this.Controls.Add(this.lbl_ForgotPassword);
             this.Controls.Add(this.chk_ShowPswd);
             this.Controls.Add(this.txtBox_pass);
             this.Controls.Add(this.label5);
@@ -178,6 +189,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtBox_pass;
         private System.Windows.Forms.CheckBox chk_ShowPswd;
+        private System.Windows.Forms.Label lbl_ForgotPassword;
     }
 }
 

@@ -21,7 +21,7 @@ namespace MainForm
 
         private void Form_Main_Load(object sender, EventArgs e)
         {
-            Form_Auth auth = new Form_Auth();
+            /*Form_Auth auth = new Form_Auth();
             DialogResult rsds = auth.ShowDialog();
             if (rsds == DialogResult.OK)
             {
@@ -30,7 +30,7 @@ namespace MainForm
             else
             {
                 Close();
-            }
+            }*/
         }
     }
 }

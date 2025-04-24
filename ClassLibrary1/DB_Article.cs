@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LIB_BLL;
 using LIB_DAL;
+using System.Data;
 
 namespace LIB_DAL
 {
@@ -68,6 +69,15 @@ namespace LIB_DAL
             {
                 return 0;
             }
+        }
+        public DataTable getAllArticle_dgv()
+        {
+            string sql = "SELECT * FROM Article";
+            SqlCommand com = new SqlCommand(sql, DB_Connect.cnt);
+            SqlDataReader dr = com.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            return dt;
         }
     }
 }
